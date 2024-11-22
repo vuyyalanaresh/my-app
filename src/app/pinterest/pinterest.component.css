@@ -1,0 +1,46 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.child{
+    width: 20%;
+    height: 30%;
+    border: solid 3px black;
+    /* background-image: url("url"); */
+    position: relative;
+}
+.img{
+    width: 18rem;  
+}
+h1{
+    text-align: center;
+}   
+.author{
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    color: aliceblue;
+    display: none;
+}
+.img:hover~.button{
+    display: block;
+}
+img:hover~.author{
+    display: block;
+}
+.button{
+    width: 35%;
+    height: 12%;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    display: none;
+    text-decoration: none;
+    cursor: pointer;
+}

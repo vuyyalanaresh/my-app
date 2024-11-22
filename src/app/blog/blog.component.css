@@ -1,0 +1,17 @@
+.child{
+    height: 30%;
+    width: 100%;
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.parent{
+    background-color:gray;
+}
+h1{
+    text-align: center;
+    /* background-color: antiquewhite; */
+}

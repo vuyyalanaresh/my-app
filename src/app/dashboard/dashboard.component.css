@@ -1,0 +1,24 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+.Right{
+    width: 80%;
+    height: 100%;
+    background-color: aqua;
+    overflow: auto;
+}
+button{
+    background-color: red;
+    width: 70%;
+    height: 5%;
+}

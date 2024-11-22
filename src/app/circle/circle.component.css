@@ -1,0 +1,18 @@
+.parent{
+    width: 300px;
+    height: 300px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 200px;
+}
+ .b2{
+    text-align: center;
+    /* margin: 30px; */
+ }
+ h3{
+    text-align: center;
+ }
+button{
+background-color: brown;
+}

@@ -1,0 +1,13 @@
+.parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.frm{
+  
+   /* margin: 10%; */
+}
+h1{
+    text-align: center;
+}

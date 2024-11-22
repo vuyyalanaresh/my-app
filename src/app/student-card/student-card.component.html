@@ -1,0 +1,53 @@
+<p>student-card works!</p>
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="filter()">
+<select [(ngModel)]="column">
+    <option >city</option>
+    <option >name</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option >desc</option>
+</select>
+<button (click)="sort()">Sort</button>
+<select [(ngModel)]="limit">
+    <option >10</option>
+    <option >20</option>
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option >2</option>
+</select>
+<button (click)="pagi()">page</button>
+<div class="parent">
+    <div class="child" *ngFor="let studentcard of studentcards">
+        <div class="top" >
+            <img class="timg" src="{{studentcard.school_logo}}" alt="" width="100px" height="100%">
+            <h3>{{studentcard.school_name}}</h3>
+        </div>
+        <div class="middle">
+            <div class="m1">
+                <h6>Name:{{studentcard.name}}</h6>
+                <h6>phone:{{studentcard.phone}}</h6>
+                <h6>DOB:{{studentcard.dob}}</h6>
+                <h6>CITY:{{studentcard.city}}</h6>
+                <h6>EMAIL:{{studentcard.email}}</h6>
+                
+
+            </div>
+            <div class="m2">
+                <img class="mimg" src="{{studentcard.profile_picture}}" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="pin">
+                <h6>school_city:{{studentcard.school_city}}</h6>
+                <h6>school_city:{{studentcard.school_pin}}</h6>
+            </div>
+            <div class="btn">
+                <button class="btn btn-warning">EDIT</button>
+                <button class="btn btn-danger">VIEW</button>
+                <button class="btn btn-primary">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

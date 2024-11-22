@@ -1,0 +1,23 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: auto;
+}
+.child{
+    width: 70%;
+    height: 20%;
+    border: solid;
+    margin-top: 10px;
+    background-color: rgb(48, 46, 46);
+}
+button{
+    width: 100px;
+    height: 30px;
+}
+p{
+    color: aliceblue;
+}
+h3{
+    color:goldenrod;
+}

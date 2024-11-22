@@ -1,0 +1,25 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(239, 226, 226);
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+.child{
+    width: 300px;
+    height: 500px;
+    border: 1px solid black ;
+    margin-top: 100px;
+    margin-left: 450px;
+}
+
+
+.pkm{
+    width: 100px;
+    height: 300px;
+}
+
+.para p{
+    font-size: 15px;
+}
