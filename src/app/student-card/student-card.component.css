@@ -62,3 +62,6 @@ margin-left: 20%;
     display: flex;
     justify-content: space-evenly;
 }
+p{
+    color: aquamarine;
+}
