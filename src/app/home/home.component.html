@@ -1,1 +1,41 @@
 <p>home works!</p>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<P>Home</P>
+<button mat-raised-button color="primary"
+    matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+  Action
+</button>
+<button mat-raised-button (click)="openBottomSheet()">Open file</button>
+<!-- buttons -->
+<button mat-raised-button>Basic</button>
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+<button mat-raised-button disabled>Disabled</button>
+<a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+<!-- matbotton toggel -->
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  </mat-button-toggle-group>
+  <!-- matcardmodule -->
+  <mat-card>
+    <mat-card-content>Simple card</mat-card-content>
+  </mat-card>
+  <!-- matcheckboxmodule -->
+  <section class="example-section">
+    <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+    <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
+  </section>
+  <!-- matchipsmodule -->
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option>One fish</mat-chip-option>
+    <mat-chip-option>Two fish</mat-chip-option>
+    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+    <mat-chip-option color="warn">Warn fish</mat-chip-option>
+  </mat-chip-listbox>
+  <!-- matdialogmodule -->
+  <button mat-raised-button (click)="openDialog()">openmodel</button>
+  
+  

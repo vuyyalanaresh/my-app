@@ -56,5 +56,16 @@ export class StudentCardComponent {
     )
 
   }
+  delete(id:string){
+    this._studentcards.deletestudentcards(id).subscribe(
+      (data:any)=>{
+      alert("deleted sucessfully");
+      location.reload();
+      },
+      (data:any)=>{
+        alert("serverdown");
+      }
+    )
+  }
 
 }

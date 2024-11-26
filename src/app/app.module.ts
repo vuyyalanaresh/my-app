@@ -33,6 +33,21 @@ import { CreateVechileComponent } from './create-vechile/create-vechile.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { DummydisplayComponent } from './dummydisplay/dummydisplay.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatCommonModule} from '@angular/material/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DummydialogDisplayComponent } from './dummydialog-display/dummydialog-display.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,14 +78,32 @@ import { CreateStudentcardComponent } from './create-studentcard/create-studentc
     CreateVechileComponent,
     CreateAccountComponent,
     StudentCardComponent,
-    CreateStudentcardComponent
+    CreateStudentcardComponent,
+    ProfileComponent,
+    DummydisplayComponent,
+    DummydialogDisplayComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatCommonModule,
+    MatDialogModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
