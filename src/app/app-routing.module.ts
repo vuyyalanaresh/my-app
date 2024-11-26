@@ -28,6 +28,8 @@ import { CreateVechileComponent } from './create-vechile/create-vechile.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -51,7 +53,9 @@ const routes: Routes = [
     {path:"create-vechile",component:CreateVechileComponent},
       {path:"create-account",component:CreateAccountComponent},
     {path:"student-card",component:StudentCardComponent},
-    {path:"create-studentcard",component:CreateStudentcardComponent}]
+    {path:"create-studentcard",component:CreateStudentcardComponent},
+    {path:"profile",component:ProfileComponent},
+    {path:"create-user",component:CreateUserComponent}]
   },
 
   { path: '', component: LoginComponent },

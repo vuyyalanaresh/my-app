@@ -28,6 +28,8 @@
             <div class="m1">
                 <h6>Name:{{studentcard.name}}</h6>
                 <h6>phone:{{studentcard.phone}}</h6>
+                <h6>id:{{studentcard.id}}</h6>
+  
                 <h6>DOB:{{studentcard.dob}}</h6>
                 <h6>CITY:{{studentcard.city}}</h6>
                 <h6>EMAIL:{{studentcard.email}}</h6>
@@ -46,7 +48,7 @@
             <div class="btn">
                 <button class="btn btn-warning">EDIT</button>
                 <button class="btn btn-danger">VIEW</button>
-                <button class="btn btn-primary">Delete</button>
+                <button class="btn btn-primary" (click)="delete(studentcard.id)">Delete</button>
             </div>
         </div>
     </div>

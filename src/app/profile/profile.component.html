@@ -1,0 +1,24 @@
+<div class="parent">
+    <div class="child">
+        <h1>Social Profiles</h1>
+    </div>
+    <div class="middle">
+        <div class="child1" *ngFor="let profile of profiles">
+            <img class="img" src="{{profile.profilePic}}" alt="">
+            <h3>{{profile.fullName}}</h3>
+            <p>{{profile.username}}</p>
+            <p *ngIf="profile.privacySettings.showEmail===true"><b>Email:</b>{{profile.email}}</p>
+            <p>{{profile.bio}}</p>
+            <p><b>Locaton:</b>{{profile.location}}</p>
+            <P *ngIf="profile.privacySettings.showBirthDate===true"><b>
+                DOB:</b>{{profile.birthDate}}</P>
+            <p><b>Hobbies:</b>{{profile.hobbies}}</p>
+            <p><b>Intrests:</b>{{profile.interests}}</p>
+            <a href="{{profile.homepage}}">visithomepage</a>
+            <br><br>
+            <p>followers:{{profile.followersCount}}</p>
+            <p>following:{{profile.followingCount}}  <span>posts{{profile.postsCount}}</span></p>
+        </div>
+    </div>
+    
+</div>
