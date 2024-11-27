@@ -48,6 +48,7 @@ import {MatCommonModule} from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DummydialogDisplayComponent } from './dummydialog-display/dummydialog-display.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentsDetailsComponent } from './students-details/students-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +83,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     ProfileComponent,
     DummydisplayComponent,
     DummydialogDisplayComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    StudentsDetailsComponent
   ],
   imports: [
     BrowserModule,
