@@ -1,0 +1,81 @@
+<h1>students-details </h1>
+<form [formGroup]="userForm">
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label>Class:</label>
+    <input type="text" formControlName="class">
+    <br>
+    <label>FatherName:</label>
+    <input type="text" formControlName="fathername">
+    <br>
+    <label>email:</label>
+    <input type="email" formControlName="email">
+    <br>
+    <label> DOB:</label>
+    <input type="date" formControlName="dob">
+    <br>
+    
+    <div formGroupName="address">
+        <label>addresline</label>
+        <input type="text" formControlName="addressline">
+        <br>
+        <label>City</label>
+        <input type="text" formControlName="City">
+        <br>
+        <label>state</label>
+        <input type="text" formControlName="state">
+        <br>
+        <label>pincode</label>
+        <input type="number" formControlName="pincode">
+        <div *ngIf="userForm.get('address.pincode')?.touched && userForm.get('address.pincode')?.invalid">
+            <p class="error" *ngIf="userForm.get('address.pincode')?.errors?.['required']">it is Required</p>
+            <p class="error" *ngIf="userForm.get('address.pincode')?.errors?.['min']">MinLeangth is 3</p>
+            <p class="error" *ngIf="userForm.get('address.pincode')?.errors?.['max']">maxleangth is 6</p>
+        </div>
+        <br>
+    </div>
+    <label>type</label>
+    <input type="radio" name="type" formControlName="type" value="DayScholor">
+    <label>DayScholor</label>
+    <input type="radio" name="type" formControlName="type" value="Residential">
+    <label>Residential</label>
+    <br>
+    <div *ngIf="userForm.get('type')?.value=='DayScholor'">
+        <label>BusFee</label>
+        <input type="number" formControlName="busfee">
+        <br>
+    </div>
+    <div *ngIf="userForm.get('type')?.value=='Residential'">
+        <label>hostelfee</label>
+        <input type="number" formControlName="hostelfee">
+    </div>
+    <label>Marks</label>
+    <button class="btn btn-warning" (click)="addmarks()">Add Marks</button>
+    <div formArrayName="marks">
+        <div *ngFor="let marks of marksFormArray.controls;let i=index">
+            <div formGroupName="{{i}}">
+                <h2>Result{{i+1}}</h2>
+
+                <label>Class:</label>
+                <input type="number" formControlName="class">
+                <br>
+                <label>Year:</label>
+                <input type="number" formControlName="year">
+                <br>
+                <label>Percentage:</label>
+                <input type="number" formControlName="Percentage">
+                <div *ngIf="marks.get('Percentage')?.touched && marks.get('Percentage')?.invalid">
+                    <p class="error" *ngIf="marks.get('Percentage')?.errors?.['required']">it is Required</p>
+                    <p class="error" *ngIf="marks.get('Percentage')?.errors?.['min']">Min 0</p>
+                    <p class="error" *ngIf="marks.get('Percentage')?.errors?.['max']">maxvalue is 100</p>
+                </div>
+                <br>
+                <hr>
+
+
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-info" (click)="submit()">submit</button>
+</form>

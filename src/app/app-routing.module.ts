@@ -30,6 +30,7 @@ import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentsDetailsComponent } from './students-details/students-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -55,7 +56,8 @@ const routes: Routes = [
     {path:"student-card",component:StudentCardComponent},
     {path:"create-studentcard",component:CreateStudentcardComponent},
     {path:"profile",component:ProfileComponent},
-    {path:"create-user",component:CreateUserComponent}]
+    {path:"create-user",component:CreateUserComponent},
+    {path:"students-details",component:StudentsDetailsComponent}]
   },
 
   { path: '', component: LoginComponent },
