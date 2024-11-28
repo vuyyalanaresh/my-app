@@ -31,11 +31,12 @@ import { CreateStudentcardComponent } from './create-studentcard/create-studentc
 import { ProfileComponent } from './profile/profile.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentsDetailsComponent } from './students-details/students-details.component';
+import { GauthenticationGuard } from './gauthentication.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
-    path: 'dashboard', component: DashboardComponent, children:
+    path: 'dashboard', canActivate:[GauthenticationGuard], component: DashboardComponent, children:
       [{ path: 'home', component: HomeComponent }, { path: 'welcome', component: WelcomeComponent }, { path: 'DataBinding', component: DataBindingComponent }, { path: 'calcultor', component: CalcultorComponent }, { path: 'rectangle', component: RectangleComponent }, { path: 'circle', component: CircleComponent }, { path: 'bmi', component: BmiComponent },
       { path: "directives", component: DirectivesComponent },
       { path: "Event-Registration", component: EventRegistrationComponent },

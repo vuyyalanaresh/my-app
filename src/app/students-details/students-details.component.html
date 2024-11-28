@@ -65,10 +65,10 @@
                 <br>
                 <label>Percentage:</label>
                 <input type="number" formControlName="Percentage">
-                <div *ngIf="marks.get('Percentage')?.touched && marks.get('Percentage')?.invalid">
-                    <p class="error" *ngIf="marks.get('Percentage')?.errors?.['required']">it is Required</p>
-                    <p class="error" *ngIf="marks.get('Percentage')?.errors?.['min']">Min 0</p>
-                    <p class="error" *ngIf="marks.get('Percentage')?.errors?.['max']">maxvalue is 100</p>
+                <div *ngIf="marksFormArray.controls[i]?.get('Percentage')?.touched && marksFormArray.controls[i]?.get('Percentage')?.invalid">
+                    <p class="error" *ngIf="marksFormArray.controls[i]?.get('Percentage')?.errors?.['required']">it is Required</p>
+                    <p class="error" *ngIf="marksFormArray.controls[i]?.get('Percentage')?.errors?.['min']">Min 0</p>
+                    <p class="error" *ngIf="marksFormArray.controls[i]?.get('Percentage')?.errors?.['max']">maxvalue is 100</p>
                 </div>
                 <br>
                 <hr>
